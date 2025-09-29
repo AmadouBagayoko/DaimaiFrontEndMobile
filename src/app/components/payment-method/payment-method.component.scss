@@ -1,0 +1,99 @@
+.payment-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.payment-button {
+  --background: #f8f8f8;
+  --background-activated: #4E3AFD;
+  --background-focused: #4E3AFD;
+  --background-hover: #e8e8e8;
+  --color: #000;
+  --border-radius: 12px;
+  --padding-top: 18px;
+  --padding-bottom: 18px;
+  --padding-start: 20px;
+  --padding-end: 20px;
+  height: 60px;
+  margin: 0;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+
+  &.selected {
+    --background: #4E3AFD;
+    --color: #fff;
+    border: 2px solid #4E3AFD;
+  }
+}
+
+.button-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.button-text {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+}
+
+// Style au survol
+.payment-button:not(.selected):hover {
+  --background: #e8e8e8;
+  border: 2px solid #4E3AFD;
+}
+
+// Style pour l'état actif
+.payment-button:not(.selected):active {
+  --background: #d8d8d8;
+}
+
+// Responsive
+@media (max-width: 480px) {
+  .payment-container {
+    padding: 10px 0;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+  
+  .payment-button {
+    height: 55px;
+    --padding-top: 16px;
+    --padding-bottom: 16px;
+  }
+  
+  .button-text {
+    font-size: 15px;
+  }
+}

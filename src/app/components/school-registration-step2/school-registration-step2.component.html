@@ -1,0 +1,66 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="registration-container">
+    <h1 class="title">DAIMAI</h1>
+    <p class="subtitle">Informations Complémentaires</p>
+
+    <form [formGroup]="schoolForm" (ngSubmit)="onSubmit()">
+      <!-- Champ Téléphone -->
+       <label class="file-upload-label">Telephone</label>
+      <ion-item class="form-item">
+        <ion-input 
+          formControlName="phone"
+          type="tel" 
+          placeholder="+22390909090"
+          class="custom-input">
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="phone?.invalid && phone?.touched">
+        <small *ngIf="phone?.errors?.['required']">Le téléphone est requis</small>
+        <small *ngIf="phone?.errors?.['pattern']">Format de téléphone invalide</small>
+      </ion-text>
+
+      <!-- Upload Fichier Autorisation -->
+      <div class="file-upload-section">
+        <label class="file-upload-label">Autorisation</label>
+        <div class="file-upload-container" (click)="triggerPhoneFileInput()">
+          <div class="file-upload-content">
+            <span class="file-name">{{ getFileName(selectedPhoneFile) }}</span>
+            <span class="file-browse">Choisir</span>
+          </div>
+        </div>
+        <input 
+          type="file" 
+          id="phoneFile"
+          (change)="onPhoneFileSelected($event)"
+          accept=".pdf,.doc,.docx,image/*"
+          style="display: none">
+      </div>
+
+      <!-- Upload Fichier Photo -->
+      <div class="file-upload-section">
+        <label class="file-upload-label">Photo</label>
+        <div class="file-upload-container" (click)="triggerPhotoFileInput()">
+          <div class="file-upload-content">
+            <span class="file-name">{{ getFileName(selectedPhotoFile) }}</span>
+            <span class="file-browse">Choisir</span>
+          </div>
+        </div>
+        <input 
+          type="file" 
+          id="photoFile"
+          (change)="onPhotoFileSelected($event)"
+          accept="image/*"
+          style="display: none">
+      </div>
+
+      <!-- Bouton S'inscrire -->
+      <ion-button 
+        type="submit" 
+        expand="block" 
+        class="submit-button"
+        [disabled]="schoolForm.invalid || !selectedPhoneFile || !selectedPhotoFile">
+        S'inscrire
+      </ion-button>
+    </form>
+  </div>
+</ion-content>

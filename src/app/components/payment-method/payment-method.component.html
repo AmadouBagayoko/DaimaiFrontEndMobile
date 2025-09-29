@@ -1,0 +1,52 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="payment-container">
+    <h1 class="title">Amadou Bagayoko</h1>
+    <p class="subtitle">Choisissez votre mode de paiement</p>
+
+    <div class="payment-options">
+      <!-- Option Orange Money -->
+      <ion-button 
+        class="payment-button"
+        [class.selected]="selectedMethod === 'orange'"
+        (click)="selectPaymentMethod('orange')"
+        expand="block">
+        <div class="button-content">
+          <span class="button-text">Payer avec Orange Money</span>
+        </div>
+      </ion-button>
+
+      <!-- Option Moov Money -->
+      <ion-button 
+        class="payment-button"
+        [class.selected]="selectedMethod === 'moov'"
+        (click)="selectPaymentMethod('moov')"
+        expand="block">
+        <div class="button-content">
+          <span class="button-text">Payer avec Moov Money</span>
+        </div>
+      </ion-button>
+
+      <!-- Option PayPal -->
+      <ion-button 
+        class="payment-button"
+        [class.selected]="selectedMethod === 'paypal'"
+        (click)="selectPaymentMethod('paypal')"
+        expand="block">
+        <div class="button-content">
+          <span class="button-text">Payer avec Paypal</span>
+        </div>
+      </ion-button>
+
+      <!-- Option Carte Bancaire -->
+      <ion-button 
+        class="payment-button"
+        [class.selected]="selectedMethod === 'card'"
+        (click)="selectPaymentMethod('card')"
+        expand="block">
+        <div class="button-content">
+          <span class="button-text">Payer avec Carte Bancaire</span>
+        </div>
+      </ion-button>
+    </div>
+  </div>
+</ion-content>
