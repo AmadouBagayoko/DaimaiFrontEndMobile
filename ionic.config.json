@@ -1,0 +1,7 @@
+{
+  "name": "daimaiFrontendMobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
