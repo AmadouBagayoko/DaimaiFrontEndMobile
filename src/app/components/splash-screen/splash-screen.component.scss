@@ -1,0 +1,50 @@
+/* Container bleu en haut */
+.top-container {
+  background-color: #007bff; /* bleu */
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  width: 600px;
+  height: auto;
+}
+
+/* Bouton retour en haut à gauche */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px; /* bouton à gauche */
+  color: white;
+  font-size: 24px;
+  transform: rotate(0deg); /* on s’assure qu’il n’est pas inversé */
+}
+
+
+/* Zone des boutons en bas */
+.bottom-buttons {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* espace entre les boutons */
+  padding: 0 20px;
+}
+
+ion-button.rounded-button {
+  font-size: 18px;
+  height: 60px;
+  border-radius: 30px; /* arrondi réel */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+ion-icon {
+  font-size: 24px; /* taille standard de l'icône */
+}

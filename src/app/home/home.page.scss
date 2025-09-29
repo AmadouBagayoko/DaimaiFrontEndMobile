@@ -1,27 +1,68 @@
-#container {
-  text-align: center;
+.no-scroll {
+  --overflow: hidden;
+}
+
+/* Logo principal */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 150px);
+
+  img {
+    width: 500px;
+    margin-top: -60px;
+  }
+
+  h2 {
+    font-size: 70px;
+    font-weight: bold;
+    color: black;
+    margin-top: -100px;
+  }
+}
+
+/* Bande bleue en bas */
+#cont1 {
+  width: 100%;
+  height: 150px;
+  background-color: blue;
+  position: relative;
+}
+
+/* Cercle flottant au-dessus du conteneur */
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
+  top: -60px; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
+  /* Cercle intérieur bleu avec flèche */
+  .inner-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #007bff; /* bleu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 36px;
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+    ion-icon {
+      color: white;
+      font-size: 24px; // taille de l'icône
+    }
+  }
 }

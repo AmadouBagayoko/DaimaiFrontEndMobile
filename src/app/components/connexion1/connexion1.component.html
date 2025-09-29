@@ -1,0 +1,39 @@
+<ion-content class="ion-padding">
+
+  <div class="top-circle-background">
+    <div class="logo-text-container">
+      <img src="assets/icon/image.png" alt="Logo Daimai" class="logo">
+      <h2 class="daimai-text">DAIMAI</h2>
+    </div>
+  </div>
+
+  <h1 class="welcome-message">Inscrivez-vous pour nous rejoindre</h1>
+
+  <form (ngSubmit)="submitForm()">
+    
+    <ion-item class="input-item">
+      <ion-input type="text" [(ngModel)]="profession" name="profession" placeholder="profession"></ion-input>
+    </ion-item>
+
+    <ion-item class="input-item">
+      <ion-input type="text" [(ngModel)]="domicile" name="domicile" placeholder="domicile"></ion-input>
+    </ion-item>
+
+    <ion-item class="input-item">
+      <ion-input type="tel" [(ngModel)]="motDepasse" name="motDepasse" placeholder="Mot de passe"></ion-input>
+    </ion-item>
+
+    <ion-item class="input-item">
+      <ion-input type="email" [(ngModel)]="cmotDepasse" name="cmotDepasse" placeholder="Confirmermot de passe"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" class="submit-button">
+      Valider
+    </ion-button>
+  </form>
+
+  <p class="login-link">
+    Vous avez déjà un compte ? <a routerLink="/connexion">Connectez vous</a>
+  </p>
+
+</ion-content>

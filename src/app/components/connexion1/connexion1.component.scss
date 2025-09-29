@@ -1,0 +1,122 @@
+ion-content {
+  --background: #ffffff; /* Fond blanc partout */
+  /* Empêche le défilement sur le ion-content */
+  --overflow: hidden; 
+}
+
+/* ---------------------------------------------------- */
+/* SECTION : FOND CIRCULAIRE SUPÉRIEUR */
+/* ---------------------------------------------------- */
+/* ---------------------------------------------------- */
+/* SECTION : FOND CIRCULAIRE SUPÉRIEUR */
+/* ---------------------------------------------------- */
+.top-circle-background {
+  width: 140vw; 
+  height: 140vw;
+  background-color: #5c6bc0; 
+  border-radius: 50%; 
+  position: absolute;
+  top: -70vw; 
+  left: 50%;
+  transform: translateX(-50%); 
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; 
+  padding-bottom: 20px; 
+  overflow: hidden;
+  z-index: 1; 
+}
+
+.logo-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* CORRECTION : Déplace la marge négative ici pour remonter l'ensemble du conteneur (logo + texte) */
+  margin-bottom: 3vw; /* Une valeur négative modérée pour remonter l'ensemble. Ajustez si nécessaire. */
+  position: relative; 
+  z-index: 2; 
+}
+
+.logo {
+  /* Retrait de la marge négative pour que le texte se place juste en dessous */
+  width: 480px; 
+  height: auto;
+  margin-bottom: -10px; /* Petite marge pour séparer du texte DAIMAI */
+}
+
+.daimai-text {
+  color: white;
+  font-size: 1.5em; 
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  bottom: 5px;
+}
+
+/* ---------------------------------------------------- */
+/* SECTION : FORMULAIRE ET MESSAGES */
+/* ---------------------------------------------------- */
+
+/* Message d'accueil "Inscrivez-vous pour nous rejoindre" */
+.welcome-message {
+  text-align: center;
+  font-size: 1.1em; 
+  font-weight: 500;
+  color: #333;
+  /* CORRECTION ICI : Augmentation significative de la marge pour faire descendre le formulaire */
+  margin-top: 50vw; 
+  margin-bottom: 55px; 
+  margin-top: 230px;
+  position: relative;
+  bottom: -40px;
+  z-index: 5; 
+}
+
+/* Styles pour les champs de saisie */
+.input-item {
+  --background: #ffffff; 
+  --border-radius: 10px; 
+  --border-color: #ddd; 
+  --border-width: 1px;
+  --inner-border-width: 0; 
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08); 
+  margin-bottom: 12px; 
+  overflow: hidden; 
+}
+
+ion-input {
+  --padding-start: 12px; 
+  --padding-end: 12px;
+  --placeholder-color: #888;
+  --color: #333;
+  font-size: 0.95em; 
+}
+
+
+/* Style du bouton "Suivant" */
+.submit-button {
+  --background: #5c6bc0; 
+  --background-activated: #4a148c; 
+  --border-radius: 10px; 
+  margin-top: 25px; 
+  height: 45px; 
+  font-size: 1em; 
+  font-weight: 600;
+}
+
+/* Style du lien "Connectez vous" */
+.login-link {
+  text-align: center;
+  margin-top: 20px; 
+  font-size: 0.85em; 
+  color: #555;
+  padding-bottom: 20px; 
+}
+
+.login-link a {
+  color: #5c6bc0; 
+  text-decoration: none;
+  font-weight: bold;
+}

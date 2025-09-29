@@ -1,0 +1,23 @@
+<ion-content [fullscreen]="true" class="ion-no-padding">
+  <!-- Bande bleue en haut avec logo et bouton retour -->
+  <div class="top-container">
+    <ion-button fill="clear" class="back-button" (click)="goBack()">
+      <ion-icon slot="start" name="arrow-back-outline"></ion-icon> <!-- flèche gauche -->
+    </ion-button>
+    <img src="assets/icon/image.png" alt="Logo" class="logo"/>
+  </div>
+
+  <!-- Boutons en bas -->
+  <div class="bottom-buttons">
+    <ion-button expand="block" color="primary" (click)="onFirstClick()" class="rounded-button">
+      Premier Bouton
+      <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+    </ion-button>
+
+    <ion-button expand="block" color="secondary" (click)="onSecondClick()" class="rounded-button">
+      Deuxième Bouton
+      <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+    </ion-button>
+  </div>
+</ion-content>
+
