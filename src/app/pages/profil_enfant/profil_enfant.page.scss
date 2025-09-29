@@ -1,0 +1,32 @@
+.sticky-top { position: sticky; top: 0; z-index: 10; background: #ffffff; }
+.page-top {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 12px; color: #4E3AFD;
+}
+.dot { color: #ffffff; }
+.sponsor-top { --background: #F28C28; height: 26px; }
+
+.profile-card {
+  display: grid; grid-template-columns: 96px 1fr; gap: 12px;
+  background: #ffffff; border-radius: 14px; margin: 0 12px; padding: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08); border: 1px solid #ececec;
+}
+.avatar { width: 96px; height: 96px; border-radius: 12px; object-fit: cover; }
+.name { font-weight: 700; color: #000000; margin-bottom: 6px; }
+.row { color: #6b7280; font-size: 12px; margin: 2px 0; }
+
+.section-title { margin: 14px 12px 8px; font-weight: 700; color: #000000; }
+
+.reports { display: flex; flex-direction: column; gap: 10px; padding: 0 12px 120px; }
+.report {
+  display: grid; grid-template-columns: 40px 1fr auto; gap: 10px;
+  background: #ffffff; border-radius: 14px; padding: 10px; border: 1px solid #ececec;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+.report .icon ion-icon { font-size: 28px; color: #4E3AFD; }
+.report .title { font-weight: 700; color: #000000; }
+.report .meta { font-size: 12px; color: #6b7280; }
+.report .date { font-size: 11px; color: #6b7280; }
+.report .action ion-button { --background: #4E3AFD; }
+
+

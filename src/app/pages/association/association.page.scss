@@ -1,0 +1,45 @@
+
+.dot { color: #ffffff; font-size: 6px; }
+
+.sticky-search { position: sticky; top: 0; z-index: 10; background: #ffffff; padding-top: 8px; }
+
+.children-list {
+  padding: 8px 12px 130px; /* espace supplémentaire pour footer en bas */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.child-card {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.08);
+  padding: 10px;
+  border: 1px solid #ececec;
+}
+
+.left img {
+  width: 56px; height: 56px; border-radius: 8px; object-fit: cover;
+}
+
+.name { font-weight: 700; color: #000000; font-size: 13px; }
+.grade { color: #6b7280; font-size: 11px; margin: 3px 0 6px; }
+
+.middle { display: grid; grid-template-rows: auto auto; align-items: center; }
+.middle .actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 70px; /* plus d'espace entre les deux boutons */
+}
+.profile-btn { --background: #4E3AFD; --border-radius: 6px; width: 90px; font-size: 9px; }
+.sponsor-btn { --background: #F28C28; --border-radius: 6px; width: 90px; font-size: 9px; }
+
+/* Force l’alignement vertical des deux boutons */
+.profile-btn, .sponsor-btn { --padding-top: 6px; --padding-bottom: 6px; }
+
+

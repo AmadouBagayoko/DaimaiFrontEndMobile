@@ -1,0 +1,38 @@
+.association-card {
+  margin: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: none;
+  border: 1px solid #eef0f4;
+  background: #ffffff;
+
+  .image-wrap {
+    width: 100%;
+    height: 110px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  .info {
+    background: #14c4ff1a;
+    text-align: center;
+    padding: 8px 6px;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 14px;
+    color: #000000;
+    margin: 0 0 4px 0;
+  }
+  .subtitle {
+    font-size: 12px;
+    color: #000000;
+    opacity: 0.85;
+  }
+}
+

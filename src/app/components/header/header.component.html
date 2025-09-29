@@ -1,0 +1,21 @@
+<ion-header class="daimai-header" translucent="true">
+  <ion-toolbar class="daimai-toolbar">
+    <div class="header-top">
+      <div class="brand">
+        <img src="assets/images/logoDaimai.png" alt="Daimai" />
+        <div class="hello" *ngIf="showGreeting; else titleTpl">Bonjour, {{ userName }}</div>
+        <ng-template #titleTpl>
+          <div class="page-title" *ngIf="title">{{ title }}</div>
+        </ng-template>
+      </div>
+      <div class="actions">
+        <ion-button fill="clear" size="small">
+          <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear" size="small">
+          <ion-icon slot="icon-only" name="open-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>

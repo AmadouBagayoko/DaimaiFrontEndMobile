@@ -1,0 +1,29 @@
+<app-header [userName]="userName" [showGreeting]="false" [title]="associationName"></app-header>
+
+<ion-content fullscreen>
+  <div class="sticky-search">
+    <app-search-bar (searchChange)="onSearchChange($event)"></app-search-bar>
+  </div>
+
+  <div class="children-list">
+    <div class="child-card" *ngFor="let c of filtered">
+      <div class="left">
+        <img [src]="c.avatar" [alt]="c.name" />
+      </div>
+      <div class="middle">
+        <div class="top">
+          <div class="name">{{ c.name }}</div>
+          <div class="grade">{{ c.grade }}</div>
+        </div>
+        <div class="actions">
+          <ion-button size="small" color="primary" fill="solid" class="profile-btn" [routerLink]="['/profil-enfant', c.id]">Voir profil</ion-button>
+          <ion-button size="small" color="warning" fill="solid" class="sponsor-btn">Parrainer</ion-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<app-footer-tabs [active]="'paiement'"></app-footer-tabs>
+
+

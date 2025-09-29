@@ -1,0 +1,26 @@
+<div class="footer-container">
+  <div class="pill">
+    <button class="tab" [class.active]="active==='accueil'" (click)="setActive('accueil')">
+      <ion-icon name="home"></ion-icon>
+      <span>Accueil</span>
+      <div class="active-bg"></div>
+    </button>
+    <button class="tab" [class.active]="active==='parrainage'" (click)="setActive('parrainage')">
+      <ion-icon name="people"></ion-icon>
+      <span>Parrainage</span>
+      <div class="active-bg"></div>
+    </button>
+    <button class="tab" [class.active]="active==='paiement'" (click)="setActive('paiement')">
+      <ion-icon name="card"></ion-icon>
+      <span>Paiement</span>
+      <div class="active-bg"></div>
+    </button>
+    <button class="tab" [class.active]="active==='profil'" (click)="setActive('profil')">
+      <ion-icon name="person-outline"></ion-icon>
+      <span>Profil</span>
+      <div class="active-bg"></div>
+    </button>
+  </div>
+</div>
+
+

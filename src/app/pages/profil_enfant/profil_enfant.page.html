@@ -1,0 +1,44 @@
+<app-header [showGreeting]="false" [title]="'Profil Enfant'"></app-header>
+
+<ion-content fullscreen>
+  <div class="sticky-top">
+    <div class="page-top">
+      <ion-icon name="ellipse" class="dot"></ion-icon>
+      <span>Profil Enfant</span>
+      <ion-button size="small" class="sponsor-top" color="warning">Parrainer</ion-button>
+    </div>
+  </div>
+
+  <div class="profile-card">
+    <img class="avatar" [src]="child.avatar" [alt]="child.name" />
+    <div class="info">
+      <div class="name">{{ child.name }}</div>
+      <div class="row">Classe: <b>{{ child.level }}</b></div>
+      <div class="row">Age: <b>{{ child.age }}</b></div>
+      <div class="row">Tuteur: <b>{{ child.tutor }}</b></div>
+      <div class="row">Dépense: <b>{{ child.expenses }}</b></div>
+    </div>
+  </div>
+
+  <div class="section-title">Rapports Scolaires</div>
+
+  <div class="reports">
+    <div class="report" *ngFor="let r of reports">
+      <div class="icon">
+        <ion-icon name="document-text-outline"></ion-icon>
+      </div>
+      <div class="details">
+        <div class="title">{{ r.title }}</div>
+        <div class="meta">Moyenne de Classe : {{ r.avg }} · Présence : {{ r.presence }}</div>
+        <div class="date">{{ r.date }}</div>
+      </div>
+      <div class="action">
+        <ion-button size="small" color="primary">Consulter</ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<app-footer-tabs [active]="'profil'"></app-footer-tabs>
+
+

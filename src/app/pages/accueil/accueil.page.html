@@ -1,0 +1,21 @@
+<app-header [userName]="userName" [showGreeting]="true"></app-header>
+
+<ion-content fullscreen>
+  <div class="sticky-search">
+    <app-search-bar (searchChange)="onSearchChange($event)"></app-search-bar>
+  </div>
+
+  <div class="grid">
+    <app-association-card-component
+      *ngFor="let a of filteredAssociations"
+      [imageSrc]="a.imageSrc"
+      [title]="a.title"
+      [type]="a.type"
+    ></app-association-card-component>
+  </div>
+</ion-content>
+
+<app-footer-tabs
+  [active]="activeTab"
+  (tabChange)="activeTab = $event"
+></app-footer-tabs>
