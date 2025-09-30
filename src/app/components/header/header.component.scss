@@ -1,23 +1,22 @@
-
 .daimai-header {
-  --background: #4E3AFD;
-  --ion-background-color: #4E3AFD;
+  --background: #4e3afd;
+  --ion-background-color: #4e3afd;
 }
 
 .daimai-toolbar {
-  --background: #4E3AFD;
+  --background: #4e3afd;
   --color: #ffffff;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  padding-top: 8px;
-  padding-bottom: 12px;
+  //padding-top: 8px;
+  //padding-bottom: 12px;
 }
 
 .header-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 12px;
+  //padding: 0 12px;
   color: #ffffff;
 }
 
@@ -28,18 +27,18 @@
 }
 
 .brand img {
-  width: 100px; /* logo plus grand */
+  width: 80px; /* logo plus grand */
   height: 80px;
   border-radius: 6px;
 }
-image.png
-.hello {
+image.png .hello {
   font-weight: 700;
 }
 
-.page-title { font-weight: 700; }
+.page-title {
+  font-weight: 700;
+}
 
 .actions ion-button {
   color: #ffffff;
 }
-
