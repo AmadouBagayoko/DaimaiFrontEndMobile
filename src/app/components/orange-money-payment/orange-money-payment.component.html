@@ -1,0 +1,59 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="payment-container">
+    <h1 class="title">Confirmer votre paiement</h1>
+    <div class="orange"> <img src="assets/images/orangepay.png" alt="orange" /></div>
+    <p class="subtitle">Orange Money</p>
+
+    <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+      <!-- Champ Numéro de téléphone -->
+      <ion-item class="form-item">
+        <ion-input 
+          formControlName="phoneNumber"
+          type="tel" 
+          placeholder="Numero de téléphone Orange Money"
+          class="custom-input">
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="phoneNumber?.invalid && phoneNumber?.touched">
+        <small *ngIf="phoneNumber?.errors?.['required']">Le numéro est requis</small>
+        <small *ngIf="phoneNumber?.errors?.['pattern']">Le numéro doit contenir 08 chiffres</small>
+      </ion-text>
+
+      <!-- Champ Montant -->
+      <ion-item class="form-item">
+        <ion-input 
+          formControlName="amount"
+          type="number" 
+          placeholder="Montant à payer en FCFA"
+          class="custom-input">
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="amount?.invalid && amount?.touched">
+        <small *ngIf="amount?.errors?.['required']">Le montant est requis</small>
+        <small *ngIf="amount?.errors?.['min']">Le montant minimum est 100 FCFA</small>
+      </ion-text>
+
+      <!-- Détails du paiement -->
+      <div class="payment-details">
+        <h3>Détails du paiement:</h3>
+        <p>Enfant : Amadou Bagayoko</p>
+        <p>Ecole: Les Génies</p>
+        <p>Frais de transaction: 100 FCFA</p>
+      </div>
+
+      <!-- Bouton Payer -->
+      <ion-button 
+        type="submit" 
+        expand="block" 
+        class="submit-button"
+        [disabled]="paymentForm.invalid">
+        Payer
+      </ion-button>
+
+      <!-- Message de confirmation -->
+      <p class="confirmation-message">
+        Vous allez recevoir une notification pour valider
+      </p>
+    </form>
+  </div>
+</ion-content>

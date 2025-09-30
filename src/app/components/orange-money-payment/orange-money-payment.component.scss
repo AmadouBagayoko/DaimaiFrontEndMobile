@@ -1,0 +1,122 @@
+.payment-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.orange img {
+  width: 200px;   /* ajuste la largeur du logo */
+  height: auto;       /* garde les proportions */
+  display: block;     
+  margin: 0 auto;     /* s’assure du centrage */
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.form-item {
+  margin-bottom: 25px;
+  --background: transparent;
+  --inner-padding-end: 0;
+  --padding-start: 0;
+}
+
+.custom-input {
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-top: 18px;
+  --padding-bottom: 18px;
+  --background: #f8f8f8;
+  --border-radius: 12px;
+  --placeholder-color: #999;
+  --placeholder-font-weight: 400;
+  font-size: 16px;
+  border: 2px solid #4E3AFD;
+}
+
+ion-item {
+  --border-color: transparent;
+  --inner-border-width: 0;
+  --inner-padding-end: 0;
+}
+
+.submit-button {
+  margin-top: 30px;
+  --border-radius: 12px;
+  height: 45px;
+  font-weight: 600;
+  --box-shadow: none;
+  font-size: 14px;
+  --background: #4E3AFD;
+  color: #fff;
+}
+
+ion-text small {
+  display: block;
+  margin-top: 8px;
+  margin-left: 0;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+// Détails du paiement
+.payment-details {
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 25px 0;
+  border: 2px solid #4E3AFD;
+}
+
+.payment-details h3 {
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #000;
+  font-size: 16px;
+}
+
+.payment-details p {
+  margin: 8px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+// Message de confirmation
+.confirmation-message {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+// Style pour les champs invalides
+ion-item.ion-invalid .custom-input {
+  border: 2px solid #4E3AFD;
+  --background: #fff;
+  border-radius: 12px;
+}
+
+// Style pour les champs valides
+ion-item.ion-valid .custom-input {
+  border: 2px solid #4E3AFD;
+  --background: #fff;
+}
+
+// Style focus
+.custom-input.ion-focused {
+  border: 2px solid #1a60d0;
+  --background: #fff;
+}

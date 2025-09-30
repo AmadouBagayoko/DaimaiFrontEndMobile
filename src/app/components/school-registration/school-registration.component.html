@@ -1,0 +1,59 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="registration-container">
+    <h1 class="title">DAIMAI</h1>
+    <p class="subtitle">Inscrivez votre école pour nous rejoindre</p>
+
+    <form [formGroup]="schoolForm" (ngSubmit)="onSubmit()">
+      <!-- Champ Nom -->
+      <ion-item class="form-item">
+        <ion-input 
+          formControlName="name"
+          type="text" 
+          placeholder="Nom"
+          class="custom-input">
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="name?.invalid && name?.touched">
+        <small *ngIf="name?.errors?.['required']">Le nom est requis</small>
+        <small *ngIf="name?.errors?.['minlength']">Le nom doit contenir au moins 2 caractères</small>
+      </ion-text>
+
+      <!-- Champ Email -->
+      <ion-item class="form-item">
+        <ion-input 
+          formControlName="email"
+          type="email" 
+          placeholder="Email"
+          class="custom-input">
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="email?.invalid && email?.touched">
+        <small *ngIf="email?.errors?.['required']">L'email est requis</small>
+        <small *ngIf="email?.errors?.['email']">Format d'email invalide</small>
+      </ion-text>
+
+      <!-- Champ Adresse -->
+      <ion-item class="form-item">
+        <ion-textarea 
+          formControlName="address"
+           
+          placeholder="Adresse"
+          class="custom-input">
+        </ion-textarea>
+      </ion-item>
+      <ion-text color="danger" *ngIf="address?.invalid && address?.touched">
+        <small *ngIf="address?.errors?.['required']">L'adresse est requise</small>
+        <small *ngIf="address?.errors?.['minlength']">L'adresse doit contenir au moins 5 caractères</small>
+      </ion-text>
+
+      <!-- Bouton Suivant -->
+      <ion-button 
+        type="submit" 
+        expand="block" 
+        class="submit-button"
+        [disabled]="schoolForm.invalid">
+        Suivant
+      </ion-button>
+    </form>
+  </div>
+</ion-content>
