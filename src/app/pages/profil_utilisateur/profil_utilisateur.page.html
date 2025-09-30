@@ -1,0 +1,52 @@
+<app-header-back
+  [title]="'Profil'"
+  [showSponsorButton]="false"
+></app-header-back>
+
+<ion-content fullscreen>
+  <div class="profile-container">
+    <div class="profile-header">
+      <div class="avatar-container">
+        <img class="avatar" [src]="user.avatar" [alt]="user.name" />
+      </div>
+      <h2 class="profile-name">{{ user.name }}</h2>
+      <p class="profile-subtitle">{{ user.level }}</p>
+    </div>
+
+    <div class="info-section">
+      <div class="info-card">
+        <div class="info-item">
+          <div class="info-icon">
+            <ion-icon name="mail-outline"></ion-icon>
+          </div>
+          <div class="info-content">
+            <p class="info-label">Email</p>
+            <p class="info-value">{{ user.email }}</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <ion-icon name="call-outline"></ion-icon>
+          </div>
+          <div class="info-content">
+            <p class="info-label">Téléphone</p>
+            <p class="info-value">{{ user.phone }}</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <ion-icon name="location-outline"></ion-icon>
+          </div>
+          <div class="info-content">
+            <p class="info-label">Adresse</p>
+            <p class="info-value">{{ user.address }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<app-footer-tabs [active]="activeTab"></app-footer-tabs>

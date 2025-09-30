@@ -1,0 +1,17 @@
+<ion-header class="daimai-header" translucent="true">
+  <ion-toolbar class="daimai-toolbar">
+    <div class="header-top">
+      <div class="brand" (click)="goBack()">
+        <ion-button fill="clear" size="small" class="back-btn" color="white">
+          <ion-icon slot="icon-only" name="arrow-back-circle"></ion-icon>
+        </ion-button>
+        <div class="page-title">{{ title }}</div>
+      </div>
+      <div class="actions">
+        <ion-button *ngIf="showSponsorButton" size="small" class="sponsor" (click)="sponsor.emit()">Parrainer</ion-button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+

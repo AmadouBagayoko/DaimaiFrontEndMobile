@@ -36,8 +36,23 @@
   align-items: center;
   gap: 70px; /* plus d'espace entre les deux boutons */
 }
-.profile-btn { --background: #4E3AFD; --border-radius: 6px; width: 90px; font-size: 9px; }
-.sponsor-btn { --background: #F28C28; --border-radius: 6px; width: 90px; font-size: 9px; }
+.profile-btn { --background: #4E3AFD; --border-radius: 6px; width: 90px; height: 24px; font-size: 9px; }
+.sponsor-btn { --background: #F28C28; --border-radius: 6px; width: 90px; height: 24px; font-size: 9px; }
+
+/* Modal Parrainer style feuille (onglet) */
+.sponsor-modal { position: fixed; inset: 0; z-index: 1000; }
+.sponsor-modal .backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.35); }
+.sponsor-modal .sheet {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: calc(100% - 64px); max-width: 340px;
+}
+.sponsor-modal .content {
+  background: #ffffff; border-radius: 16px; padding: 16px 14px; box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+.sponsor-modal .text { text-align: center; color: #000000; margin-bottom: 12px; font-size: 15px; }
+.sponsor-modal .actions { display: flex; justify-content: center; gap: 16px; }
+.sponsor-modal .actions .cancel { --background: #4E3AFD; --border-radius: 6px; width: 90px; height: 24px; font-size: 9px; }
+.sponsor-modal .actions .confirm { --background: #F28C28; --border-radius: 6px; width: 90px; height: 24px; font-size: 9px; }
 
 /* Force l’alignement vertical des deux boutons */
 .profile-btn, .sponsor-btn { --padding-top: 6px; --padding-bottom: 6px; }

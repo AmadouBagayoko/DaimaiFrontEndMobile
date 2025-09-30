@@ -6,12 +6,13 @@
   </div>
 
   <div class="grid">
-    <app-association-card-component
-      *ngFor="let a of filteredAssociations"
-      [imageSrc]="a.imageSrc"
-      [title]="a.title"
-      [type]="a.type"
-    ></app-association-card-component>
+    <div class="assoc-item" *ngFor="let a of filteredAssociations" (click)="goToAssociation(a)">
+      <app-association-card-component
+        [imageSrc]="a.imageSrc"
+        [title]="a.title"
+        [type]="a.type"
+      ></app-association-card-component>
+    </div>
   </div>
 </ion-content>
 

@@ -1,14 +1,15 @@
 import { CommonModule, NgFor } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
-import { HeaderComponent } from '../../components/header/header.component';
+import { HeaderBackComponent } from '../../components/header-back/header-back.component';
 import { FooterTabsComponent } from '../../components/footer-tabs/footer-tabs.component';
 
 @Component({
   selector: 'app-profil-enfant',
   standalone: true,
-  imports: [IonicModule, CommonModule, NgFor, HeaderComponent, FooterTabsComponent],
+  imports: [IonicModule, CommonModule, RouterModule, NgFor, HeaderBackComponent, FooterTabsComponent],
   templateUrl: './profil_enfant.page.html',
   styleUrls: ['./profil_enfant.page.scss'],
 })
@@ -28,6 +29,8 @@ export class ProfilEnfantPage {
     { id: 2, title: 'Bulletin T2-2024', avg: '13,44', presence: '92 %', date: '15/03/2024' },
     { id: 3, title: 'Bulletin T1-2024', avg: '11,20', presence: '89 %', date: '15/12/2023' },
   ];
+
+  showConfirm = false;
 
   constructor(private route: ActivatedRoute) {
     const id = this.route.snapshot.paramMap.get('id');

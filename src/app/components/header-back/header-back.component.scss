@@ -1,0 +1,16 @@
+.daimai-header { --background: #4E3AFD; --ion-background-color: #4E3AFD; }
+.daimai-toolbar { --background: #4E3AFD; --color: #ffffff; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; padding-top: 8px; padding-bottom: 12px; }
+.header-top { display: flex; align-items: center; justify-content: space-between; padding: 0 12px; color: #ffffff; }
+.brand { display: flex; align-items: center; gap: 8px; }
+.back-btn { color: #ffffff; }
+.back-btn ion-icon { font-size: 26px; }
+.page-title { font-weight: 700; }
+.actions .sponsor {
+  --background: #F28C28;
+  --border-radius: 6px;
+  height: 24px;
+  width: 90px;
+  font-size: 9px;
+}
+
+

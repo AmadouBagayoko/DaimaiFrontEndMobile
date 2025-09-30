@@ -1,0 +1,25 @@
+<app-header-back [title]="title"></app-header-back>
+
+<ion-content fullscreen>
+  <div class="sticky-search">
+    <app-search-bar></app-search-bar>
+  </div>
+
+  <div class="list">
+    <div class="item" *ngFor="let c of sponsored">
+      <img [src]="c.avatar" [alt]="c.name" />
+      <div class="info">
+        <div class="name">{{ c.name }}</div>
+        <a class="link">Voir profil</a>
+      </div>
+      <div class="actions">
+        <ion-button class="finance">Financement</ion-button>
+        <ion-button class="retire">Retirer</ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<app-footer-tabs active="parrainage"></app-footer-tabs>
+
+

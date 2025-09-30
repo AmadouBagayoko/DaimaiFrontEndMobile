@@ -1,13 +1,7 @@
-<app-header [showGreeting]="false" [title]="'Profil Enfant'"></app-header>
+<app-header-back [title]="'Profil Enfant'" [showSponsorButton]="true" (sponsor)="showConfirm = true"></app-header-back>
 
 <ion-content fullscreen>
-  <div class="sticky-top">
-    <div class="page-top">
-      <ion-icon name="ellipse" class="dot"></ion-icon>
-      <span>Profil Enfant</span>
-      <ion-button size="small" class="sponsor-top" color="warning">Parrainer</ion-button>
-    </div>
-  </div>
+
 
   <div class="profile-card">
     <img class="avatar" [src]="child.avatar" [alt]="child.name" />
@@ -39,6 +33,20 @@
   </div>
 </ion-content>
 
-<app-footer-tabs [active]="'profil'"></app-footer-tabs>
+<app-footer-tabs></app-footer-tabs>
+
+<!-- Modal Parrainer depuis Profil Enfant -->
+<div class="sponsor-modal" *ngIf="showConfirm">
+  <div class="backdrop" (click)="showConfirm = false"></div>
+  <div class="sheet">
+    <div class="content">
+      <div class="text">Voulez-vous vraiment parrainer cet enfant ?</div>
+      <div class="actions">
+        <ion-button class="cancel" (click)="showConfirm = false">Annuler</ion-button>
+        <ion-button class="confirm" [routerLink]="['/parrainage']">Confirmer</ion-button>
+      </div>
+    </div>
+  </div>
+</div>
 
 

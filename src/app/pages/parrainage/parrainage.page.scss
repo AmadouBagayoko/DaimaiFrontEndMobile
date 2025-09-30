@@ -1,0 +1,15 @@
+.sticky-search { position: sticky; top: 0; z-index: 10; background: #ffffff; padding-top: 8px; }
+.list { padding: 10px 12px 130px; display: flex; flex-direction: column; gap: 10px; }
+.item {
+  display: grid; grid-template-columns: 48px 1fr auto; gap: 10px;
+  background: #ffffff; border-radius: 12px; padding: 10px; border: 1px solid #ececec;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+.item img { width: 48px; height: 48px; border-radius: 8px; object-fit: cover; }
+.name { font-weight: 700; color: #000; margin-bottom: 4px; }
+.link { color: #4E3AFD; font-size: 12px; text-decoration: none; }
+.actions { display: flex; align-items: center; gap: 8px; }
+.finance { --background: #4E3AFD; --border-radius: 6px; width: 100px; height: 24px; font-size: 9px; }
+.retire { --background: #F28C28; --border-radius: 6px; width: 80px; height: 24px; font-size: 9px; }
+
+

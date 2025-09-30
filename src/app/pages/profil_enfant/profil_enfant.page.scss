@@ -7,26 +7,56 @@
 .sponsor-top { --background: #F28C28; height: 26px; }
 
 .profile-card {
-  display: grid; grid-template-columns: 96px 1fr; gap: 12px;
-  background: #ffffff; border-radius: 14px; margin: 0 12px; padding: 12px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.08); border: 1px solid #ececec;
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 14px;
+  background: #ffffff;
+  border-radius: 18px;
+  margin: 12px 12px 10px;
+  padding: 14px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  border: 1px solid #e6e8ee;
 }
-.avatar { width: 96px; height: 96px; border-radius: 12px; object-fit: cover; }
-.name { font-weight: 700; color: #000000; margin-bottom: 6px; }
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+.name { font-weight: 700; color: #000000; margin-bottom: 8px; }
 .row { color: #6b7280; font-size: 12px; margin: 2px 0; }
 
 .section-title { margin: 14px 12px 8px; font-weight: 700; color: #000000; }
 
-.reports { display: flex; flex-direction: column; gap: 10px; padding: 0 12px 120px; }
+.reports { display: flex; flex-direction: column; gap: 12px; padding: 12px 12px 130px; }
 .report {
-  display: grid; grid-template-columns: 40px 1fr auto; gap: 10px;
-  background: #ffffff; border-radius: 14px; padding: 10px; border: 1px solid #ececec;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  gap: 12px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 14px;
+  border: 1px solid #e6e8ee;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  min-height: 96px;
 }
-.report .icon ion-icon { font-size: 28px; color: #4E3AFD; }
+.report .icon ion-icon { font-size: 30px; color: #4E3AFD; }
 .report .title { font-weight: 700; color: #000000; }
 .report .meta { font-size: 12px; color: #6b7280; }
 .report .date { font-size: 11px; color: #6b7280; }
-.report .action ion-button { --background: #4E3AFD; }
+.report .action ion-button { --background: #4E3AFD;  --border-radius: 6px;
+  height: 24px;
+  width: 90px;
+  font-size: 9px;}
+
+/* Modal Parrainer (mêmes styles que association) */
+.sponsor-modal { position: fixed; inset: 0; z-index: 1000; }
+.sponsor-modal .backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.35); }
+.sponsor-modal .sheet { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: calc(100% - 64px); max-width: 340px; }
+.sponsor-modal .content { background: #ffffff; border-radius: 16px; padding: 16px 14px; box-shadow: 0 20px 40px rgba(0,0,0,0.25); }
+.sponsor-modal .text { text-align: center; color: #000000; margin-bottom: 12px; font-size: 15px; }
+.sponsor-modal .actions { display: flex; justify-content: center; gap: 16px; }
+.sponsor-modal .actions .cancel { --background: #4E3AFD; --border-radius: 6px; width: 90px; height: 24px; font-size: 9px; }
+.sponsor-modal .actions .confirm { --background: #F28C28; --border-radius: 6px; width: 90px; height: 24px; font-size: 9px; }
 
 

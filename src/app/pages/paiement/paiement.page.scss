@@ -1,0 +1,119 @@
+// Palette principale
+$violet: #6b46ff; // couleur violette utilisée sur la maquette
+$light-violet-bg: #f4f3ff;
+$muted: #9b9b9b;
+$text: #3b3b3b;
+
+// Page wrapper
+.page-paiement {
+  --background: linear-gradient(
+    180deg,
+    $violet 0%,
+    $violet 0%
+  ); // header violet en haut
+  background-color: $light-violet-bg;
+  padding: 0;
+}
+
+.payment-history-container {
+  width: calc(100% - 32px);
+  margin: 18px auto 90px auto; // centré avec marge en bas pour le footer
+  background: #ffffff;
+  // border-radius: 28px;
+  padding: 18px 14px;
+  // box-shadow: 0 10px 30px rgba(107, 70, 255, 0.12);
+  height: 100%;
+  width: 100%;
+}
+
+.payment-card {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 999px; // forme pilule
+  padding: 10px 14px;
+  margin: 12px 6px;
+  box-shadow: 0 6px 18px rgba(40, 30, 90, 0.06);
+}
+
+.payment-card.last {
+  margin-bottom: 8px;
+}
+
+.payment-card .left {
+  width: 56px;
+  display: flex;
+  justify-content: center;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  background: #4e3afd; // cercle bleu demandé
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff; // icone en blanc
+  font-size: 24px;
+  box-shadow: 0 6px 18px rgba(78, 58, 253, 0.18);
+}
+
+.avatar ion-icon {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.payment-icon {
+  /* classe utilitaire si besoin */
+  color: #ffffff !important;
+  font-size: 22px;
+}
+
+.center {
+  flex: 1;
+  padding-left: 6px;
+}
+
+.title {
+  color: $text;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.title .strong {
+  font-weight: 700;
+}
+
+.sub {
+  color: $muted;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.right {
+  text-align: right;
+  width: 96px;
+}
+
+.amount {
+  color: $violet;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.date {
+  color: $muted;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* petits ajustements responsive */
+@media (max-width: 420px) {
+  .payment-history-container {
+    width: calc(100% - 24px);
+  }
+  .right {
+    width: 86px;
+  }
+}
