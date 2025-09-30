@@ -1,0 +1,144 @@
+<ion-content class="ion-padding no-scroll">
+  <div class="payment-container">
+
+    <h2 class="section-title">Paiement avec Paypal</h2>
+
+    <div class="paypal-section">
+      <div class="paypal"> <img src="assets/images/paypal.png" alt="paypal" /></div>
+      <h4 class="info-title">Information</h4>
+
+      <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+        <!-- Champ Name -->
+        <ion-item class="form-item">
+          <ion-input 
+            formControlName="name"
+            type="text" 
+            placeholder="Name"
+            class="custom-input">
+          </ion-input>
+        </ion-item>
+        <ion-text color="danger" *ngIf="name?.invalid && name?.touched">
+          <small *ngIf="name?.errors?.['required']">Le nom est requis</small>
+        </ion-text>
+
+        <!-- Champ Carte Number -->
+        <ion-item class="form-item">
+          <ion-input 
+            formControlName="cardNumber"
+            type="text" 
+            placeholder="Carte Number"
+            class="custom-input">
+          </ion-input>
+        </ion-item>
+        <ion-text color="danger" *ngIf="cardNumber?.invalid && cardNumber?.touched">
+          <small *ngIf="cardNumber?.errors?.['required']">Le numéro de carte est requis</small>
+          <small *ngIf="cardNumber?.errors?.['pattern']">Le numéro doit contenir 16 chiffres</small>
+        </ion-text>
+
+        <!-- Champ Date d'expiration -->
+<ion-item class="form-item date-item">
+  <ion-input 
+    formControlName="expiry"
+    type="text" 
+    placeholder="MM/AA"
+    class="custom-input"
+    (click)="openDatePicker()"
+    readonly>
+  </ion-input>
+  <ion-datetime-button datetime="expiryDatetime"></ion-datetime-button>
+  
+  <ion-popover [isOpen]="isOpen" (didDismiss)="isOpen = false">
+    <ng-template>
+      <ion-datetime 
+        id="expiryDatetime"
+        presentation="month-year"
+        locale="fr-FR"
+        (ionChange)="setExpiryDate($event)"
+        [min]="getCurrentDate()"
+        [max]="getMaxDate()">
+      </ion-datetime>
+    </ng-template>
+  </ion-popover>
+</ion-item>
+
+<ion-text color="danger" *ngIf="expiry?.invalid && expiry?.touched">
+  <small>La date d'expiration est requise</small>
+</ion-text>
+
+
+        <!-- Champ CVV -->
+        <ion-item class="form-item">
+          <ion-input 
+            formControlName="cvv"
+            type="text" 
+            placeholder="CVV"
+            class="custom-input">
+          </ion-input>
+        </ion-item>
+        <ion-text color="danger" *ngIf="cvv?.invalid && cvv?.touched">
+          <small *ngIf="cvv?.errors?.['required']">Le CVV est requis</small>
+          <small *ngIf="cvv?.errors?.['pattern']">Le CVV doit contenir 3 ou 4 chiffres</small>
+        </ion-text>
+
+        <!-- Champ Montant -->
+        <ion-item class="form-item">
+          <ion-input 
+            formControlName="amount"
+            type="number" 
+            placeholder="Montant à payer"
+            class="custom-input">
+          </ion-input>
+        </ion-item>
+        <ion-text color="danger" *ngIf="amount?.invalid && amount?.touched">
+          <small *ngIf="amount?.errors?.['required']">Le montant est requis</small>
+          <small *ngIf="amount?.errors?.['min']">Le montant minimum est 100</small>
+        </ion-text>
+
+        <!-- Pays -->
+        <div class="country-section">
+          
+          
+          <ion-item class="form-item country-select-item" *ngIf="!showCustomCountry">
+            <ion-select 
+              formControlName="country"
+              placeholder="Selectionnez un pays"
+              class="custom-select"
+              (ionChange)="onCountryChange($event)"
+              interface="action-sheet">
+              <ion-select-option *ngFor="let country of countries" [value]="country">
+                {{ country }}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item class="form-item custom-country-item" *ngIf="showCustomCountry">
+            <ion-input 
+              formControlName="country"
+              type="text" 
+              placeholder="Entrez votre pays"
+              class="custom-input"
+              (ionInput)="onCustomCountryInput($event)">
+            </ion-input>
+            <div class="check-icon" slot="end">✓</div>
+          </ion-item>
+
+          <ion-text color="danger" *ngIf="country?.invalid && country?.touched">
+            <small>Le pays est requis</small>
+          </ion-text>
+        </div>
+
+        <!-- Séparateur -->
+        <div class="separator"></div>
+
+        <!-- Bouton Valider -->
+        <ion-button 
+          type="submit" 
+          expand="block" 
+          class="submit-button"
+          [disabled]="paymentForm.invalid">
+          Valider
+        </ion-button>
+      </form>
+    </div>
+  </div>
+</ion-content>

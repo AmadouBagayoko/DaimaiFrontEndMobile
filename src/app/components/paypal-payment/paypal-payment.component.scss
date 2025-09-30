@@ -1,0 +1,75 @@
+/* Fixe le fond blanc et désactive la transparence de ion-content */
+ion-content.no-scroll {
+  --background: #fff !important;
+  --overflow: hidden; /* pas de scroll */
+  height: 100%;
+}
+
+/* Container général */
+.payment-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px 16px;
+  box-sizing: border-box;
+  background: #fff; /* fond opaque pour éviter effet transparent */
+  min-height: 100%; /* occupe toute la hauteur */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* TITRES */
+.section-title, .paypal-title, .info-title {
+  text-align: center;
+  color: #000;
+}
+
+.paypal img {
+  width: 100px;   /* ajuste la largeur du logo */
+  height: auto;       /* garde les proportions */
+  display: block;     
+  margin: 0 auto;     /* s’assure du centrage */
+}
+
+.section-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 30px; }
+.paypal-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 15px; }
+.info-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 20px; }
+
+/* Champs */
+ion-item.form-item {
+  --background: transparent;
+  background: #eaf6ff;
+  border: 1px solid #64b5f6;
+  border-radius: 15px;
+  margin: 10px 0;
+  padding-left: 0;
+  overflow: hidden;
+}
+
+ion-item.form-item ion-input,
+ion-item.form-item ion-select {
+  --background: transparent;
+  background: transparent !important;
+  width: 100%;
+}
+
+ion-item.form-item input,
+ion-item.form-item textarea,
+ion-item.form-item .native-input {
+  background: transparent !important;
+  border: none !important;
+  padding: 14px 16px !important;
+  font-size: 16px;
+  color: #000;
+}
+
+/* Bouton */
+.submit-button {
+  margin-top: 20px;
+  --border-radius: 8px;
+  height: 45px;
+  font-weight: 600;
+  font-size: 14px;
+  --background: #4E3AFD;
+  color: #fff;
+}

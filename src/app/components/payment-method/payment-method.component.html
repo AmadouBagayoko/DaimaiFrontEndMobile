@@ -1,7 +1,12 @@
 <ion-content [fullscreen]="true" class="ion-padding">
+    <div class="boypay">
+    <img src="assets/images/boy.png" alt="orange" />
+  </div>
   <div class="payment-container">
     <h1 class="title">Amadou Bagayoko</h1>
-    <p class="subtitle">Choisissez votre mode de paiement</p>
+    <div class="divider"></div>
+    <p class="subtitle">Choisissez votre mode de paiement pour cet enfant</p>
+  
 
     <div class="payment-options">
       <!-- Option Orange Money -->
@@ -10,6 +15,7 @@
         [class.selected]="selectedMethod === 'orange'"
         (click)="selectPaymentMethod('orange')"
         expand="block">
+        <img src="assets/images/orangepay.png" alt="orange" />
         <div class="button-content">
           <span class="button-text">Payer avec Orange Money</span>
         </div>
@@ -21,6 +27,7 @@
         [class.selected]="selectedMethod === 'moov'"
         (click)="selectPaymentMethod('moov')"
         expand="block">
+        <img src="assets/images/moovpay.png" alt="moov" />
         <div class="button-content">
           <span class="button-text">Payer avec Moov Money</span>
         </div>
@@ -32,6 +39,7 @@
         [class.selected]="selectedMethod === 'paypal'"
         (click)="selectPaymentMethod('paypal')"
         expand="block">
+        <img src="assets/images/paypal.png" alt="paypal" />
         <div class="button-content">
           <span class="button-text">Payer avec Paypal</span>
         </div>
@@ -43,6 +51,7 @@
         [class.selected]="selectedMethod === 'card'"
         (click)="selectPaymentMethod('card')"
         expand="block">
+        <img src="assets/images/bankpay.png" alt="bankpay" />
         <div class="button-content">
           <span class="button-text">Payer avec Carte Bancaire</span>
         </div>

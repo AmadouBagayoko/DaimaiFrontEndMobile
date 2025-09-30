@@ -2,18 +2,34 @@
   max-width: 500px;
   margin: 0 auto;
   padding: 20px 0;
+  text-align: center;
+}
+
+.boypay {
+  text-align: center;
+  margin-bottom: -20px;
+}
+
+.boypay img {
+  max-width: 200px; 
+  height: auto;
 }
 
 .title {
-  text-align: center;
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 8px;
   color: #000;
 }
 
+.divider {
+  width: 80%; 
+  height: 1px;
+  background-color: #ccc; 
+  margin: 0 auto 20px auto; 
+}
+
 .subtitle {
-  text-align: center;
   font-size: 1rem;
   color: #666;
   margin-bottom: 40px;
@@ -26,7 +42,7 @@
 }
 
 .payment-button {
-  --background: #f8f8f8;
+  --background: #a198f8;
   --background-activated: #4E3AFD;
   --background-focused: #4E3AFD;
   --background-hover: #e8e8e8;
@@ -64,12 +80,12 @@
 // Style au survol
 .payment-button:not(.selected):hover {
   --background: #e8e8e8;
-  border: 2px solid #4E3AFD;
+  border: 2px solid #988ef3;
 }
 
 // Style pour l'état actif
 .payment-button:not(.selected):active {
-  --background: #d8d8d8;
+  --background: #7e76c4;
 }
 
 // Responsive

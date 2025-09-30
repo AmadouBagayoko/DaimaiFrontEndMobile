@@ -5,7 +5,8 @@ import {
   IonItem, 
   IonLabel, 
   IonButton,
-  IonIcon
+  IonIcon,
+  NavController
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -25,28 +26,33 @@ import {
 export class PaymentMethodComponent {
   selectedMethod: string = '';
 
+  constructor(private navCtrl: NavController) {}
+
   selectPaymentMethod(method: string) {
     this.selectedMethod = method;
     console.log('Méthode de paiement sélectionnée:', method);
     
     // Ici vous pouvez ajouter la logique de navigation ou de traitement
-    // this.processPayment(method);
+    this.processPayment(method);
   }
 
   processPayment(method: string) {
     // Logique de traitement du paiement selon la méthode sélectionnée
     switch(method) {
       case 'orange':
-        // Traitement Orange Money
+        this.navCtrl.navigateForward('/orange-money-payment');
         break;
       case 'moov':
         // Traitement Moov Money
+        this.navCtrl.navigateForward('/moov-money-payment');
         break;
       case 'paypal':
         // Traitement PayPal
+        this.navCtrl.navigateForward('/paypal-payment');
         break;
       case 'card':
         // Traitement Carte Bancaire
+        this.navCtrl.navigateForward('/card-payment');
         break;
     }
   }
